@@ -1,0 +1,31 @@
+{
+  "name": "create account assist",
+  "description": "I will help to create account",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "host_permissions": [],
+  "permissions": [],
+  "background": {
+    "service_worker": "jquery.min.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "css": [
+        "styles.css",
+        "jquery-ui.css"
+      ],
+      "js": [
+        "jquery.min.js",
+        "jquery-ui.js",
+        "scripts.js"
+      ]
+    }
+  ]
+}
